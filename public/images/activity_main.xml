@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="8dp"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adriana_abbas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+    <ImageButton
+        android:id="@+id/usernameDropdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/username"
+        android:src="@drawable/usernameDropdown"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/username"
+        android:contentDescription="@string/usernameDropdown"/>
+
+    <ImageButton
+        android:id="@+id/dropdown"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/Dropdown"
+        android:background="@color/black"
+        android:contentDescription="@string/dropdown"/>
+
+    <ImageButton
+        android:id="@+id/addPost"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/black"
+        android:contentDescription="@string/addPost"
+        android:src="@drawable/AddPost"
+        app:layout_constraintRight_toLeftOf="@id/dropdown"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="128dp"
+        android:src="@drawable/ProfileIcon"
+        android:layout_height="134dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/profilePicture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/editProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profilePic"
+        app:layout_constraintTop_toTopOf="parent">
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posts"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="472"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_name"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/profilePic"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/she_her"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/profilePic"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/name"/>
+
+    <ImageView
+        android:id="@+id/lebanon"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/lebanon"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <ImageView
+        android:id="@+id/venezuela"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/lebanon"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintLeft_toRightOf="@id/lebanon"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <TextView
+        android:id="@+id/editProfile"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:background="#262626"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Edit profile"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lebanon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="#262626"
+        android:padding="5dp"
+        android:src="@drawable/AddContact"
+        app:layout_constraintLeft_toRightOf="@id/editProfile"
+        app:layout_constraintTop_toBottomOf="@id/lebanon" />
+
+
+    <LinearLayout
+        android:padding="8dp"
+        android:id="@+id/highlights"
+        app:layout_constraintTop_toBottomOf="@+id/editProfile"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/img"
+            android:layout_gravity="center"
+            />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/img"
+            />
+
+        <!-- This view with weight 1 as a flex space to evenly space out other views -->
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/img"
+            android:layout_gravity="center"
+            />
+
+        <!-- This view with weight 1 as a flex space to evenly space out other views -->
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/img"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:padding="8dp"
+        android:id="@+id/tab_menu"
+        app:layout_constraintTop_toBottomOf="@+id/highlights"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:src="@drawable/GridIcon"
+            android:layout_gravity="center"
+            />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/VideoIcon"
+            />
+
+        <!-- This view with weight 1 as a flex space to evenly space out other views -->
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:src="@drawable/ProfileIcon"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_menu"
+        android:layout_width="128dp"
+        android:layout_height="2.5dp"
+        android:background="@drawable/line"
+        />
+
+    <ImageView
+        android:id="@+id/pic1"
+        android:layout_width="128dp"
+        android:src="@drawable/ProfileIcon"
+        android:layout_height="134dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/profilePicture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_menu"/>
+
+
+    <ImageView
+        android:id="@+id/pic2"
+        android:layout_width="128dp"
+        android:src="@drawable/ProfileIcon"
+        android:layout_height="134dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/profilePicture"
+        app:layout_constraintLeft_toRightOf="@id/pic1"
+        app:layout_constraintTop_toBottomOf="@id/tab_menu"/>
+
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/house"
+            />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/search"
+            />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/VideoIcon"
+            />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/shopping"
+            />
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ProfileIcon"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
